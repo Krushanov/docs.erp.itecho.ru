@@ -1,0 +1,42 @@
+site_name: Itecho ERP
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.expand
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.syntax
+    - navigation.indexes
+  language: ru
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-4 
+        name: Переключиться на ночную тему
+      primary: teal
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/brightness-7
+        name: Переключиться на дневную тему
+      primary: teal
+      accent: teal
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+      permalink_title: Ссылка для навигации к выбранному пункту
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
